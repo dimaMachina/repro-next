@@ -13,5 +13,14 @@ export default {
         }
       }
     }
+  },
+  webpack(config, options) {
+    config.module.rules.push({
+      test: /\.mdx$/,
+      use: [options.defaultLoaders.babel, {
+        loader: require.resolve('./test-loader.js')
+      }]
+    })
+    return config
   }
 }
