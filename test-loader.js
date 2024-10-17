@@ -1,4 +1,4 @@
-module.exports = function loader(code) {
-  console.log("resource query: ", this.resourceQuery);
-  return 'export const v = "anything"';
-};
+module.exports = function (code) {
+  console.log('[test-loader.js]', 'this.resourceQuery', [this.resourceQuery])
+  return `export default () => "${code}"`
+}
