@@ -1,6 +1,6 @@
 # Dynamic `resourceQuery` isn't passed in Webpack loader with Turbopack enabled
 
-1. Run `pnpm dev --turbo`
+1. Run `pnpm dev`
 2. See in console
 
 ```text
